@@ -10,3 +10,5 @@ class TodoApp extends React.Component {
         )
     }
 }
+
+export default TodoApp;
