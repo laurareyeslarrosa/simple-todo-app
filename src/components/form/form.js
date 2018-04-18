@@ -14,7 +14,7 @@ export default class AddForm extends React.Component {
         return (
             <div>
                 {this.props.formItems.map((item) =>
-                    <InputItem item={item} />
+                    <InputItem item={item} key={item.name.replace(/\s/g, "_")}/>
                 )}
                 <FlatButton primary={true} label="submit" disabled={!this.state.isSubmitBtnEnabled} onClick={this.props.onSubmit} />
             </div>

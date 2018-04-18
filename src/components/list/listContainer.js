@@ -7,7 +7,7 @@ class ListItems extends React.Component {
         return (
             <List>
                 {this.props.todoItems.map((item) =>
-                    <ListItemData item={item}/>
+                    <ListItemData key={item.title.replace(/\s/g, "_")} item={item}/>
                 )}
             </List>
         )

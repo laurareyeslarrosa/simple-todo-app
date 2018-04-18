@@ -1,34 +1,93 @@
 import React from 'react';
+import {inputType} from './../../helpers/const';
+import DatePicker from 'material-ui/DatePicker';
+import TextField from 'material-ui/TextField';
+import Slider from 'material-ui/Slider';
 
 export default class InputItem extends React.Component {
     constructor(props) {
         super(props);
     }
 
-    render() {
+    renderInputText() {
         return (
             <div>
-                {this.props.item.name}
+                <TextField
+                    id={this.props.item.name.replace(/\s/g, "_")}
+                    key={this.props.item.name.replace(/\s/g, "_")}
+                    
+                    hintText={this.props.item.name}
+                    floatingLabelText={this.props.item.name}
+                    value={this.props.item.value}
+                    onChange={this.props.item.onChangeFunction}
+                    fullWidth={true}
+                />
             </div>
         )
     }
-}
 
-
-
-
-/*
-
-    getTodoItemFormData() {
-        return [
-            {name:'title', value: todoItem.title, type: inputType.text, onChangeFunction: ''},
-            {name:'description', value: todoItem.description, type: inputType.field, onChangeFunction: ''},
-            {name:'category', value: todoItem.category, type: inputType.text, onChangeFunction: ''},
-            {name:'user', value: todoItem.user, type: inputType.text, onChangeFunction: ''},
-            {name:'percentage complete', value: todoItem.percentage_complete, type: inputType.number, onChangeFunction: ''},
-            {name:'date from', value: todoItem.date_from, type: inputType.date, onChangeFunction: ''},
-            {name:'date to', value: todoItem.date_to, type: inputType.date, onChangeFunction: ''},
-        ] 
+    renderInputField() {
+        return (
+            <div>
+                <TextField
+                    id={this.props.item.name.replace(/\s/g, "_")}
+                    hintText={this.props.item.name}
+                    floatingLabelText={this.props.item.name}
+                    value={this.props.item.value}
+                    onChange={this.props.item.onChangeFunction}
+                    fullWidth={true}
+                    multiLine={true}
+                    rows={4}
+                />
+            </div>
+        )
     }
 
-    */
+    renderInputSlider() {
+        let min = (this.props.item.min) ? this.props.item.min : 0;
+        let max = (this.props.item.max) ? this.props.item.max : 100;
+
+        return (
+            <div>
+                <p>{this.props.item.name}</p>
+                <Slider
+                    id={this.props.item.name.replace(/\s/g, "_")}
+                    min={min}
+                    max={max}
+                    step={1}
+                    value={this.props.item.value}
+                    onChange={this.props.item.onChangeFunction}
+   //                 fullWidth={true}
+                />
+            </div>
+        )
+    }
+
+    renderInputDate() {
+        return (
+            <div>
+                <DatePicker
+                    id={this.props.item.name.replace(/\s/g, "_")}
+                    hintText={this.props.item.name}
+                    floatingLabelText={this.props.item.name}
+ //                   value={this.props.item.value}
+                    onChange={this.props.item.onChangeFunction}
+                    fullWidth={true}
+                />
+            </div>
+        )
+    }
+
+    render() {
+        switch (this.props.item.type) {
+            case inputType.text:
+                return this.renderInputText();
+            case inputType.field:
+                return this.renderInputField();
+            case inputType.number:
+                return this.renderInputSlider();
+            case inputType.date:
+                return this.renderInputDate();
+        }
+    }
+}
