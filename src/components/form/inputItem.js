@@ -13,13 +13,59 @@ export default class InputItem extends React.Component {
         return (
             <div>
                 <TextField
-                    id={this.props.item.name.replace(/\s/g, "_")}
-                    key={this.props.item.name.replace(/\s/g, "_")}
-                    
+                    id={this.props.item.key}
+                    datatype={this.props.item.type}
                     hintText={this.props.item.name}
                     floatingLabelText={this.props.item.name}
                     value={this.props.item.value}
-                    onChange={this.props.item.onChangeFunction}
+                    onChange={(this.props.item.onChange) ? this.props.item.onChange : this.props.onChange}
+                    fullWidth={true}
+                />
+            </div>
+        )
+    }
+
+    renderInputDate() {
+        return (
+            <div>
+                <DatePicker
+                    id={this.props.item.key}
+                    datatype={this.props.item.type}
+                    hintText={this.props.item.name}
+                    floatingLabelText={this.props.item.name}
+                    value={this.props.item.value}
+                    onChange={this.props.item.onChange}
+                    fullWidth={true}
+                />
+            </div>
+        )
+    }
+
+    render() {
+        switch (this.props.item.type) {
+            case inputType.date:
+                return this.renderInputDate();
+            default:
+                return this.renderInputText();
+        }
+    }
+
+
+/*
+    handleValueChange(e) {
+       // this.setState({itemValue: e.target.value});
+    this.props.item.onChangeFunction(this.props.item)
+    }
+
+    renderInputText() {
+        return (
+            <div>
+                <TextField
+                    id={this.props.item.name.replace(/\s/g, "_")}
+                    hintText={this.props.item.name}
+                    floatingLabelText={this.props.item.name}
+                    value={this.state.itemValue}
+                    onChange={this.handleValueChange}
                     fullWidth={true}
                 />
             </div>
@@ -57,7 +103,6 @@ export default class InputItem extends React.Component {
                     step={1}
                     value={this.props.item.value}
                     onChange={this.props.item.onChangeFunction}
-   //                 fullWidth={true}
                 />
             </div>
         )
@@ -78,6 +123,8 @@ export default class InputItem extends React.Component {
         )
     }
 
+
+
     render() {
         switch (this.props.item.type) {
             case inputType.text:
@@ -90,4 +137,6 @@ export default class InputItem extends React.Component {
                 return this.renderInputDate();
         }
     }
+
+    */
 }
