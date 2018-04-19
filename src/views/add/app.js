@@ -3,7 +3,7 @@ import AddForm from './../../components/form/form';
 import { inputType } from './../../helpers/const';
 import { setTodoItems } from './../../helpers/serverHandler';
 
-class Add extends React.Component {
+export default class Add extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -81,11 +81,9 @@ class Add extends React.Component {
     render() {
         let formItems = this.getTodoItemFormData();
         return (
-            <div class='addItemContainer'>
+            <div className='addItemContainer'>
                 <AddForm onSubmit={this.handleSubmit} formItems={formItems} onChange={this.handleInputOnChange} />
             </div>
         )
     }
 }
-
-export default Add;

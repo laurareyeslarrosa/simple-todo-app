@@ -4,15 +4,15 @@ import AppRouter from './../../components/router/app';
 import Header from './../../components/header/header';
 import MyMuiTheme from './../../content/css/app.style';
 
-class TodoApp extends React.Component {
+export default class TodoApp extends React.Component {
     render() {
         return (
             <MuiThemeProvider muiTheme={MyMuiTheme}>
-                <Header/>
-                <AppRouter />
+                <div>
+                    <Header />
+                    <AppRouter />
+                </div>
             </MuiThemeProvider>
         )
     }
 }
-
-export default TodoApp;

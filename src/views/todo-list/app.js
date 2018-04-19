@@ -3,7 +3,7 @@ import ListItems from './../../components/list/listContainer';
 import {getTodoItems} from './../../helpers/serverHandler';
 
 
-class TodoList extends React.Component {
+export default class TodoList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -18,5 +18,3 @@ class TodoList extends React.Component {
         )
     }
 }
-
-export default TodoList;

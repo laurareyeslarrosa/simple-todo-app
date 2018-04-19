@@ -16,18 +16,18 @@ export default class AddForm extends React.Component {
         return (
             <div>
                 <Paper>
-                    <div class="titleFormContainer">
+                    <div className="titleFormContainer">
                         <div>Add item</div>
                         <div>Set a new todo item</div>
                     </div>
                     <Divider/>
-                    <div class="formContainer">
+                    <div className="formContainer">
                         {this.props.formItems.map((item) =>
                             <InputItem item={item} key={item.name.replace(/\s/g, "_")} onChange={this.props.onChange} />
                         )}
                     </div>
                 </Paper>
-                <div class="btnSubmitContainer">
+                <div className="btnSubmitContainer">
                     <FlatButton primary={true} label="submit" disabled={!this.state.isSubmitBtnEnabled} onClick={this.props.onSubmit} />
                 </div>
             </div>

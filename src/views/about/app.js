@@ -2,17 +2,17 @@ import React from 'react';
 import Paper from 'material-ui/Paper';
 import Divider from 'material-ui/Divider';
 
-class About extends React.Component {
+export default class About extends React.Component {
     render() {
         return (
-            <div class='aboutPanelContainer'>
+            <div className='aboutPanelContainer'>
                 <Paper>
-                    <div class='aboutTitleContainer'>
+                    <div className='aboutTitleContainer'>
                         <div>About me</div>
                         <div>This is an about me panel</div>
                     </div>
                     <Divider />
-                    <div class='aboutTextContainer'>
+                    <div className='aboutTextContainer'>
                         This is the first version of a simple todo items list.
                         Its simply made to test the node, mongo and axios integration.
                         <br />
@@ -27,5 +27,3 @@ class About extends React.Component {
         )
     }
 }
-
-export default About;

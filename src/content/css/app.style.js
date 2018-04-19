@@ -1,4 +1,3 @@
-import React from 'react';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 const colors = {
@@ -17,7 +16,6 @@ const MyMuiTheme = getMuiTheme({
     textColor: colors.darkerBlue,
     alternateTextColor: colors.white,
     canvasColor: colors.white,
-    borderColor: colors.lightBlue,
     pickerHeaderColor: colors.lightBlue
   },
 });

@@ -10,18 +10,18 @@ export default class ListItemData extends React.Component {
                 disabled={true}
                 key={this.props.item.title}>
                 <Paper>
-                    <div class="itemTitleContainer">
-                    <div class="itemTitle">{this.props.item.title}</div>
-                    <div class="itemUser">by: {this.props.item.user}</div>
+                    <div className="itemTitleContainer">
+                    <div className="itemTitle">{this.props.item.title}</div>
+                    <div className="itemUser">by: {this.props.item.user}</div>
                     </div>
                     <Divider />
-                    <div class="itemDataContainer">
+                    <div className="itemDataContainer">
                         <div>Category: {this.props.item.category}</div>
                         <div>Complete: {this.props.item.percentage_complete}%</div>
                         <div>Date from: {this.props.item.date_from}</div>
                         <div>Date to: {this.props.item.date_from}</div>
                     </div>
-                    <div class="itemDetailContainer">
+                    <div className="itemDetailContainer">
                         <div>Detalle</div>
                         <div>{this.props.item.description}</div>
                     </div>

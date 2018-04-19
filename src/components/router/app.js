@@ -5,7 +5,7 @@ import TodoList from './../../views/todo-list/app';
 import Add from './../../views/add/app';
 import About from './../../views/about/app';
 
-class AppRouter extends React.Component {
+export default class AppRouter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,14 +24,14 @@ class AppRouter extends React.Component {
     render() {
         return (
             <div>
-                <div class='panelesContainer'>
+                <div className='panelesContainer'>
                     <SwipeableViews index={this.state.pageValue} onChangeIndex={this.handleChange}>
                         <div><TodoList /></div>
                         <div><Add /></div>
                         <div><About /></div>
                     </SwipeableViews>
                 </div>
-                <div class='navTabsContainer'>
+                <div className='navTabsContainer'>
                     <Tabs onChange={this.handleTabChange} value={this.state.pageValue}>
                         <Tab label='TodoList' value={0} />
                         <Tab label='Add' value={1} />
@@ -42,5 +42,3 @@ class AppRouter extends React.Component {
         )
     };
 };
-
-export default AppRouter;
