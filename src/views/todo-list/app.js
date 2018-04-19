@@ -14,7 +14,7 @@ class TodoList extends React.Component {
 
     render() {
         return (
-            <div><ListItems todoItems={this.state.todoItems}/></div>
+            <ListItems todoItems={this.state.todoItems}/>
         )
     }
 }
