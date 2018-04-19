@@ -53,7 +53,31 @@ body {
 
 /* #region ESTILOS PANEL ADD */
 
+.addItemContainer {
+    padding: 12px;
+}
 
+.titleFormContainer {
+    padding: 10px 5px;
+}
+
+.titleFormContainer > div:first-of-type {
+    font-size: 15px;
+}
+
+.titleFormContainer > div:last-of-type {
+    font-size: 10px;
+    text-align: right;
+}
+
+.formContainer {
+    padding: 0 10px;
+}
+
+.btnSubmitContainer {
+    text-align: right;
+    margin-top: 15px;
+}
 
 /* #endregion */
 

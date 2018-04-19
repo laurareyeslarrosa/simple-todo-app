@@ -37,7 +37,6 @@ class Add extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        console.log(this.state);
 
         let obj = {
             title: this.state.title,
@@ -63,31 +62,26 @@ class Add extends React.Component {
     }
 
     handleDateFromOnChange(e, date) {
-        console.log(date);
         this.setState({ date_from: date });
     }
 
     handleDateToOnChange(e, date) {
-        console.log(date);
         this.setState({ date_to: date });
     }
 
     handlePercentageOnChange(e) {
-        console.log(e);
         if (!isNaN(e.target.value))
             this.setState({ [e.target.id]: e.target.value });
     }
 
     handleInputOnChange(e) {
-        console.log(e);
         this.setState({ [e.target.id]: e.target.value });
     }
 
     render() {
         let formItems = this.getTodoItemFormData();
         return (
-            <div>
-                <div>ADD ITEM FORM</div>
+            <div class='addItemContainer'>
                 <AddForm onSubmit={this.handleSubmit} formItems={formItems} onChange={this.handleInputOnChange} />
             </div>
         )
