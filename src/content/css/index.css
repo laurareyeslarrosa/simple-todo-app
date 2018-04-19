@@ -54,7 +54,7 @@ body {
 /* #region ESTILOS PANEL ADD */
 
 .addItemContainer {
-    padding: 12px;
+    padding: 24px 15px;
 }
 
 .titleFormContainer {
@@ -71,7 +71,8 @@ body {
 }
 
 .formContainer {
-    padding: 0 10px;
+    padding: 10px 0;
+    margin: 0px 15px;
 }
 
 .btnSubmitContainer {
@@ -82,5 +83,26 @@ body {
 /* #endregion */
 
 /* #region ESTILOS PANEL ABOUT */
+
+.aboutPanelContainer {
+    padding: 25px 15px;
+}
+
+.aboutTitleContainer {
+    padding: 7px 5px;
+}
+
+.aboutTitleContainer > div:first-of-type {
+    font-size: 15px;
+}
+.aboutTitleContainer > div:last-of-type {
+    font-size: 10px;
+    text-align: right;
+}
+
+.aboutTextContainer {
+    padding: 10px;
+    text-align: justify;
+}
 
 /* #endregion */
