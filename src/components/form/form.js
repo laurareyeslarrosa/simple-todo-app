@@ -5,12 +5,6 @@ import Paper from 'material-ui/Paper';
 import Divider from 'material-ui/Divider';
 
 export default class AddForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isSubmitBtnEnabled: true
-        }
-    }
 
     render() {
         return (
@@ -28,7 +22,7 @@ export default class AddForm extends React.Component {
                     </div>
                 </Paper>
                 <div className="btnSubmitContainer">
-                    <FlatButton primary={true} label="submit" disabled={!this.state.isSubmitBtnEnabled} onClick={this.props.onSubmit} />
+                    <FlatButton primary={true} label="submit" disabled={!this.props.isSubmitBtnEnabled} onClick={this.props.onSubmit} />
                 </div>
             </div>
         )
