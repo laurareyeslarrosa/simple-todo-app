@@ -7,10 +7,10 @@ class Add extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: "",
-            description: "",
-            category: "",
-            user: "",
+            title: '',
+            description: '',
+            category: '',
+            user: '',
             percentage_complete: 0,
             date_from: null,
             date_to: null
@@ -51,10 +51,10 @@ class Add extends React.Component {
         setTodoItems(this, obj);
 
         this.setState({
-            title: "",
-            description: "",
-            category: "",
-            user: "",
+            title: '',
+            description: '',
+            category: '',
+            user: '',
             percentage_complete: 0,
             date_from: null,
             date_to: null

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Add from './app';
+import AddForm from './form';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Add />, div);
+  ReactDOM.render(<AddForm />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
