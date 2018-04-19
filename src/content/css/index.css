@@ -7,6 +7,13 @@ body {
     background: #F2F3F5;
 }
 
+.headerTitle {
+    font-family: 'Gugi', cursive;
+    font-size: 15px;
+    font-weight: 500;
+    float: right;
+}
+
 /* #endregion */
 
 /* #region ESTILOS PANEL TODO LIST */
